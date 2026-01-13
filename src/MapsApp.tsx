@@ -1,10 +1,12 @@
-import { PlacesProviders } from "./context/places";
+import { MapProvider, PlacesProviders } from "./context";
 import { HomeScreen } from "./screens";
 
 export const MapsApp = () => {
   return (
     <PlacesProviders>
-      <HomeScreen />
+      <MapProvider>
+        <HomeScreen />
+      </MapProvider>
     </PlacesProviders>
   );
 };
