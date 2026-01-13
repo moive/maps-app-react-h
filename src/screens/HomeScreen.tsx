@@ -1,5 +1,11 @@
-import { MapView } from "../components";
+import { BtnMyLocation, MapView, ReactLogo } from "../components";
 
 export const HomeScreen = () => {
-  return <MapView />;
+  return (
+    <>
+      <MapView />;
+      <BtnMyLocation />
+      <ReactLogo />
+    </>
+  );
 };

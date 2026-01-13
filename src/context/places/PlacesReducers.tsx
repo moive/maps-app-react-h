@@ -1,4 +1,4 @@
-import type { PlacesState } from "./placesProviders";
+import type { PlacesState } from "./PlacesProviders";
 
 type PlaceAction = { type: "setUserLocation"; payload: [number, number] };
 
