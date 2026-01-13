@@ -66,3 +66,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.loading-map {
+  background-color: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  color: white;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+}

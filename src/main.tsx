@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { MapsApp } from "./MapsApp";
 
-createRoot(document.getElementById('root')!).render(
+if (!navigator.geolocation) {
+  const msgError = "Geolocation is not supported by your browser";
+  alert(msgError);
+  throw new Error(msgError);
+}
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <MapsApp />
   </StrictMode>,
-)
+);
