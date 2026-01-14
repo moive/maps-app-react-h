@@ -19,3 +19,6 @@
   top: 20px;
   width: 250px;
 }
+.pointer {
+  cursor: pointer;
+}
