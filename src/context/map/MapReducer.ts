@@ -1,7 +1,9 @@
-import type { Map } from "maplibre-gl";
+import type { Map, Marker } from "maplibre-gl";
 import type { MapState } from "./MapProvider";
 
-type MapAction = { type: "setMap"; payload: Map };
+type MapAction =
+  | { type: "setMap"; payload: Map }
+  | { type: "setMarkers"; payload: Marker[] };
 
 export const MapReducer = (state: MapState, action: MapAction): MapState => {
   switch (action.type) {
@@ -10,6 +12,11 @@ export const MapReducer = (state: MapState, action: MapAction): MapState => {
         ...state,
         isMapReady: true,
         map: action.payload,
+      };
+    case "setMarkers":
+      return {
+        ...state,
+        markers: action.payload,
       };
 
     default:
